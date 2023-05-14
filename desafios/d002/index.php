@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <h1>Convertor de <mark>Reais</mark> para <mark>Dólar</mark> V 1.0</h1>
-        <form action="mostrar.php" method="get">
-            <label for="idin">Digite o valor em reais:</label>
-            <input type="number" name="din" id="idin">
+        <h1>Trabalhando com númeors aleatórios</h1>
+        <p>Gerando um número aleatório entre 0 e 100<br></p>
+        <?php
 
-            <input type="submit" value="Enviar">
-        </form>
+        //Não é bom utilizar o rand por que ele é velho
+        // $geradorDeNumeroAleatorio = rand(0,100);
+
+        //Ambos utilzam a mesma lógica, o rando e o mt_rand
+        $geradorDeNumeroAleatorio = mt_rand(0,100);
+
+        // Para gerar números criptografados 
+        //$geradorDeNumeroAleatorio = random_int(0,100);
 
 
-    </main>
-
+        echo "$geradorDeNumeroAleatorio";
 
     
+
+        // function recarregar (){
+        //     for ($num = 0; $num < 1; $num++) {
+        //     header("Refresh: 0");
+        //     }
+        //     $num = 0;
+        // }
+
+
+        ?>
+
+    <button onclick="javascript:document.location.reload()">Gerar outro</button>
+
+    </main>
 </body>
 </html>
