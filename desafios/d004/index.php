@@ -9,7 +9,7 @@
 </head>
 <body>
     <main>
-        <h1>Convertor de <mark>Reais</mark> para <mark>Dólar</mark> v1.0</h1>
+        <h1>Convertor de <mark>Reais</mark> para <mark>Dólar</mark> v2.0</h1>
         <form action="mostrar.php" method="get">
             <label for="idin">Digite o valor em reais:</label>
             <input type="number" name="din" id="idin" step="0.01" required>

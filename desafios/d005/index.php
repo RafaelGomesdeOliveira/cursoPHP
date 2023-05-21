@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=], initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styl.css">
 </head>
 <body>
+
     <main>
-        <h1>Convertor de <mark>Reais</mark> para <mark>Dólar</mark> v1.0</h1>
+        <h1>Analisando um Número Real</h1>
         <form action="mostrar.php" method="get">
-            <label for="idin">Digite o valor em reais:</label>
-            <input type="number" name="din" id="idin" step="0.01" required>
+            <label for="inum">Número Real:</label>
+            <input type="number" name="num" id="inum" step="0.001" required>
 
             <input type="submit" value="Enviar">
-
         </form>
 
-
-
-
     </main>
-
 
     
 </body>
