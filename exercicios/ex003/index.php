@@ -7,10 +7,11 @@
     $numero = 3e2; //  3 x 10 elevado ao quadrado (2)
     
     $numero = (integer) 45.5; //Coerção
-        
     $v = false;
     echo "O valor para v é <strong>$v</strong>" . "<br>";
     var_dump($numero);
+
+    echo "Aqui";
 
     $nome = "Rafael";
     $sobrenome = "Gomes de Oliveira \u{1F634}" . "<br>";
