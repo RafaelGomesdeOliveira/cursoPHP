@@ -26,7 +26,7 @@
     </main>    
     <?php 
         $raizQuadrada = $num ** (1/2);
-
+        //OU UTILIZANDO A FUNÇÃO sqrt($num);
         $raizCubica = $num ** (1/3);
 
     ?>

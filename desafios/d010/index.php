@@ -18,9 +18,9 @@
         <h1>Calculando a sua idade</h1>
         <form action="<?=$_SERVER['PHP_SELF'];?>" method="get">
             <label for="inasc">Em que você nasceu?</label>
-            <input type="number" name="nas" id="inas" value="<?=$nas;?>" required>
+            <input type="number" name="nas" id="inas" value="<?=$nas;?>" max="<?=$data?>" required>
 
-            <label for="iano">Quer saber sua iddade em que ano? (atualmente estamos em <strong><?=$ano;?></strong>)</label>
+            <label for="iano">Quer saber sua idade em que ano? (atualmente estamos em <strong><?=$data;?></strong>)</label>
             <input type="number" name="ano" id="iano" value="<?=$ano;?>" required >
 
             <input type="submit" value="Qual será a minha idade?">
@@ -33,12 +33,24 @@
         $idade = $ano - $nas;
     }
     ?>
-    <section id="resultado">
+    <section>
         <h2>Resultado</h2>
-        <p>Quem nasceu em <?php if($nas != null){echo "$nas";}else echo "$data";?> vai ter <strong><?="$idade anos"?></strong> em <?=$ano;?></p>
+        <?php if($ano >= $nas) {
 
+        ?>
+            
+        <p>Quem nasceu em <?php if($nas != null){echo "$nas";}else echo "$data";?> <?php if($nas ==  $ano) {echo " tem ";} else {echo " vai ter ";}?><strong><?php echo "$idade"; if ($idade == 1 || $idade == 0){echo " ano";}else{echo" anos";}?></strong> <?php if($nas != $ano){echo " em ";}?> <?=$ano;?></p>
 
+        <?php 
+        }
+        else{
 
+        ?>
+        <p><strong>ERRO!</strong></p>
+        <p>Verifiqe se o ano em que você nasceu não é maior que o ano em que você deseja saber a sua idade!</p>
+        
+        <?php 
+        }?>
     </section>
 
 
